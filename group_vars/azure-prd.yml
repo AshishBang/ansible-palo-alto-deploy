@@ -3,7 +3,7 @@ locationShort: eastus
 environment: production
 environmentShort: prd
 rgCommonName: paloalto
-vnetResourceGroupName: RG-ansible-palo
+vnetResourceGroupName: RG-ansible-palo-alto
 vnetName: VNET-ansible-palo-alto
 commonName: paloalto
 commonNameShort: pa
