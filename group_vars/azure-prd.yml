@@ -1,9 +1,9 @@
-location: west europe
-locationShort: we
+location: East US
+locationShort: eastus
 environment: production
 environmentShort: prd
 rgCommonName: paloalto
-vnetResourceGroupName: <Virtual Network Resource Group Name>
-vnetName: <Virtual Network Name>
+vnetResourceGroupName: RG-ansible-palo-2
+vnetName: VNET-ansible-palo-alto
 commonName: paloalto
 commonNameShort: pa

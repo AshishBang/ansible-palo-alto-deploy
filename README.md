@@ -74,7 +74,27 @@ Only configured a Source NAT to allow traffic from trust to untrust.
 ## staticDnsEntries.yml
 Configure static DNS entries for the DNS Proxy.
 
+## Requirements
+
+Ansible 2.7.4+ (with azure>=2.0.0)
+
+
 # How to run
+
+See [Microsoft Azure Guide](https://docs.ansible.com/ansible/latest/scenario_guides/guide_azure.html) and [How to Install and Configure latest version of Ansible on Ubuntu Linux](https://www.cyberciti.biz/faq/how-to-install-and-configure-latest-version-of-ansible-on-ubuntu-linux/)
+
+- create resource group with vnet address space  fo 10.0.0.0/22
+
+- Run: pip install -r requirements.txt 
+
+- Run ansible playbook from site.yml
+
 ```bash
 ansible-playbook -i hosts-prd site.yml -e AZURE_CLIENT_ID="<Client ID>" -e AZURE_SECRET='"<Secret>"' -e AZURE_SUBSCRIPTION_ID="<Subscription ID>" -e AZURE_TENANT="<Tenant ID>" -e adminPassword='"<Palo Alto VM password>"'
+```
+or 
+
+```
+. env.sh
+ansible-playbook -i hosts-prd site.yml -e adminPassword='"<Palo Alto VM password>"'
 ```
