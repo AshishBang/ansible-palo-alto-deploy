@@ -93,7 +93,7 @@ ansible-playbook -i hosts-prd test.yml -e AZURE_CLIENT_ID="<Client ID>" -e AZURE
 
 - create resource group with vnet address space  fo 10.0.0.0/22
 
-- Run: pip install -r requirements.txt 
+- Run: pip install -r requirements.txt  or better ($which python) -m pip install -r requirements.txt
 
 - Run ansible playbook from site.yml
 
@@ -105,4 +105,10 @@ or
 ```
 . env.sh
 ansible-playbook -i hosts-prd site.yml -e adminPassword='"<Palo Alto VM password>"'
+```
+
+#### Errors
+
+```
+{"code":"DeploymentFailed","message":"At least one resource deployment operation failed. Please list deployment operations for details. Please see https://aka.ms/arm-debug for usage details.","details":[{"code":"BadRequest","message":"{\r\n \"error\": {\r\n \"code\": \"InvalidTemplateDeployment\",\r\n \"message\": \"The template deployment failed with error: 'The resource with id: '/subscriptions/c7084809-7044-42f7-8d2e-2fb121098957/resourceGroups/rg-prd-eastus-paloalto/providers/Microsoft.Compute/virtualMachines/vm-prd-eastus-pa01' failed validation with message: 'The resource type 'virtualMachines' does not support availability zones at location 'eastus' and api-version '2017-05-10'.'.'.\"\r\n }\r\n}"}]}
 ```
