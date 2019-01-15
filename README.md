@@ -86,7 +86,11 @@ See [Microsoft Azure Guide](https://docs.ansible.com/ansible/latest/scenario_gui
 #### Test
 
 ```bash
-ansible-playbook -i hosts-prd test.yml -e AZURE_CLIENT_ID="<Client ID>" -e AZURE_SECRET='"<Secret>"' -e AZURE_SUBSCRIPTION_ID="<Subscription ID>" -e AZURE_TENANT="<Tenant ID>"
+ansible-playbook -i hosts-prd test-vm.yml -e AZURE_CLIENT_ID="<Client ID>" -e AZURE_SECRET='"<Secret>"' -e AZURE_SUBSCRIPTION_ID="<Subscription ID>" -e AZURE_TENANT="<Tenant ID>"
+```
+
+```bash
+ansible-playbook -i hosts-prd test-fw.yml -e ip_address="" -e username="" -e password=""
 ```
 
 #### Prod
