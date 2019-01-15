@@ -106,6 +106,9 @@ or
 . env.sh
 ansible-playbook -i hosts-prd site.yml -e adminPassword='"<Palo Alto VM password>"'
 ```
+Optional:
+
+-e ansible_python_interpreter=
 
 #### Errors
 

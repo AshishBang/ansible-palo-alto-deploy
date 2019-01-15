@@ -1,0 +1,7 @@
+- hosts: azure
+  roles:
+    - azure-deploy-paloalto
+
+- hosts: paloalto
+  roles:
+    - paloalto-base-configuration
