@@ -1,9 +1,9 @@
- - name: Wait for FW reboot
-    panos_check:
-      ip_address: "{{ ip_address }}"
-      username: "{{ username }}"
-      password: "{{ password }}"
-    register: result
-    until: not result|failed
-    retries: 50
-    delay: 5
+- name: Wait for FW reboot
+  panos_check:
+    ip_address: "{{ ip_address }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+  register: result
+  until: not result|failed
+  retries: 50
+  delay: 5  
