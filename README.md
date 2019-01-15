@@ -93,7 +93,7 @@ ansible-playbook -i hosts-prd test.yml -e AZURE_CLIENT_ID="<Client ID>" -e AZURE
 
 - create resource group with vnet address space  fo 10.0.0.0/22
 
-- Run: pip install -r requirements.txt  or better ($which python) -m pip install -r requirements.txt
+- Run: pip install -r requirements.txt  or better ($which python) -m pip install -r requirements.txt (sometimes important!)
 
 - Run ansible playbook from site.yml
 
@@ -106,9 +106,11 @@ or
 . env.sh
 ansible-playbook -i hosts-prd site.yml -e adminPassword='"<Palo Alto VM password>"'
 ```
-Optional:
+Optional (sometimes necessary !):
 
 -e ansible_python_interpreter=
+
+In Virtual env, make sure that it points to python from virtual env
 
 #### Errors
 
