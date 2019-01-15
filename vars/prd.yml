@@ -1,4 +1,4 @@
-adminUsername: <Admin Username>
+adminUsername: paloalto
 panoramaPrimaryIp:
 panoramaSecondaryIp:
 albPublicPipCount: 4
@@ -7,14 +7,14 @@ albPublicPorts:
   - 443
 subnets:
   - 
-    name: <Management subnet name>
+    name: NET-MGMT
     netmask: 24
     gateway: 10.0.1.1
     ipAddresses:
       - 10.0.1.6
       - 10.0.1.7
   -
-    name: <Trust subnet name>
+    name: NET-TRUST
     netmask: 24
     gateway: 10.0.2.1
     interfaceName: ethernet1/1
@@ -22,7 +22,7 @@ subnets:
       - 10.0.2.4
       - 10.0.2.5
   -
-    name: <Untrust subnet name>
+    name: NET-UNTRUST
     netmask: 24
     gateway: 10.0.3.1
     interfaceName: ethernet1/2
@@ -39,7 +39,7 @@ albInternalIps:
 configuration:
   deviceconfig:
     system:
-      timezone: Europe/Stockholm
+      timezone: America/New_York
       banner: Unauthorized access is prohibited!
       latitude: '52.3680'
       longitude: '4.9036'
@@ -55,13 +55,13 @@ configuration:
         disableUseridSyslogListenerSsl: 'yes'
         disableUseridSyslogListenerUdp: 'yes'
       snmp:
-        location: Azure, West Europe
-        contact: <SNMP Contact>
+        location: Azure, East US
+        contact: me
         version: V2c
-        community: <SNMP Community>
+        community: notpublic
       ntp:
-        primary: 0.se.pool.ntp.org
-        secondary: 1.se.pool.ntp.org
+        primary: 0.north-america.pool.ntp.org
+        secondary: 1.north-america.pool.ntp.org
       updateSchedule:
         threats:
           action: download-and-install
