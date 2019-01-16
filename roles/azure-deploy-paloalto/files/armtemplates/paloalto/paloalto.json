@@ -228,21 +228,11 @@
             "name": "[variables('nsgNameMgmt')]",
             "location": "[resourceGroup().location]",
             "properties": {
-                "securityRules": []
-            }
-        },
-        {
-            "apiVersion": "2015-06-15",
-            "condition": "[if(equals(parameters('mainLoopCount'), 0), bool('true'), bool('false'))]",
-            "type": "Microsoft.Network/networkSecurityGroups",
-            "name": "[variables('nsgNamePublic')]",
-            "location": "[resourceGroup().location]",
-            "properties": {
                 "securityRules": [
                     {
                         "name": "Allow_any",
                         "properties": {
-                            "description": "Allow any to NetScaler Outside",
+                            "description": "Allow any to Mgmt",
                             "protocol": "*",
                             "sourcePortRange": "*",
                             "destinationPortRange": "*",
@@ -260,14 +250,14 @@
             "apiVersion": "2015-06-15",
             "condition": "[if(equals(parameters('mainLoopCount'), 0), bool('true'), bool('false'))]",
             "type": "Microsoft.Network/networkSecurityGroups",
-            "name": "[variables('nsgNameMgmt')]",
+            "name": "[variables('nsgNamePublic')]",
             "location": "[resourceGroup().location]",
             "properties": {
                 "securityRules": [
                     {
                         "name": "Allow_any",
                         "properties": {
-                            "description": "Allow any to Mgmt",
+                            "description": "Allow any to NetScaler Outside",
                             "protocol": "*",
                             "sourcePortRange": "*",
                             "destinationPortRange": "*",
