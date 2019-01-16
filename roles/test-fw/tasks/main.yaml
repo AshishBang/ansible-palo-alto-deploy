@@ -1,4 +1,4 @@
-- name: Wait for FW reboot
+- name: Wait for FW to respond
   panos_check:
     ip_address: "{{ ip_address }}"
     username: "{{ username }}"

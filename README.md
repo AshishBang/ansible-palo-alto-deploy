@@ -90,7 +90,7 @@ ansible-playbook -i hosts-prd test-vm.yml -e AZURE_CLIENT_ID="<Client ID>" -e AZ
 ```
 
 ```bash
-ansible-playbook -i hosts-prd test-fw.yml -e ip_address="" -e username="" -e password=""
+ansible-playbook -i hosts-prd test-fw.yml -e ip_address="" -e username="" -e password='""'
 ```
 
 #### Prod

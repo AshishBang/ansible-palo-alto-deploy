@@ -257,6 +257,31 @@
             }
         },
         {
+            "apiVersion": "2015-06-15",
+            "condition": "[if(equals(parameters('mainLoopCount'), 0), bool('true'), bool('false'))]",
+            "type": "Microsoft.Network/networkSecurityGroups",
+            "name": "[variables('nsgNameMgmt')]",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "securityRules": [
+                    {
+                        "name": "Allow_any",
+                        "properties": {
+                            "description": "Allow any to Mgmt",
+                            "protocol": "*",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "*",
+                            "sourceAddressPrefix": "*",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 100,
+                            "direction": "Inbound"
+                        }
+                    }
+                ]
+            }
+        },
+        {
             "type": "Microsoft.Compute/virtualMachines",
             "name": "[variables('vmName')]",
             "apiVersion": "2017-12-01",
