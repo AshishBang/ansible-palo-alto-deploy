@@ -99,6 +99,8 @@ ansible-playbook -i hosts-prd test-fw.yml -e ip_address="" -e username="" -e pas
 
 - Run: pip install -r requirements.txt  or better ($which python) -m pip install -r requirements.txt (sometimes important!)
 
+- The rg  in the azure-prd is where the vnet is located. The rg where pa is located is created based on variables 
+
 - Run ansible playbook from site.yml
 
 ```bash

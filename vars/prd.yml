@@ -9,32 +9,32 @@ subnets:
   - 
     name: net-mgmt
     netmask: 26
-    gateway: 10.61.2.1
+    gateway: 10.61.129.1
     ipAddresses:
-      - 10.61.2.6
-      - 10.61.2.7
+      - 10.61.129.6
+      - 10.61.129.7
   -
     name: net-trust
     netmask: 24
-    gateway: 10.61.3.1
+    gateway: 10.61.130.1
     interfaceName: ethernet1/1
     ipAddresses:
-      - 10.61.3.4
-      - 10.61.3.5
+      - 10.61.130.4
+      - 10.61.130.5
   -
     name: net-untrust
     netmask: 24
-    gateway: 10.61.4.1
+    gateway: 10.61.131.1
     interfaceName: ethernet1/2
     ipAddresses:
-      - 10.61.4.4
-      - 10.61.4.5
+      - 10.61.131.4
+      - 10.61.131.5
 albInternalIps:
-  - 10.61.3.101
-  - 10.61.3.102
-  - 10.61.3.103
-  - 10.61.3.104
-  - 10.61.3.105
+  - 10.61.130.101
+  - 10.61.130.102
+  - 10.61.130.103
+  - 10.61.130.104
+  - 10.61.130.105
 
 configuration:
   deviceconfig:

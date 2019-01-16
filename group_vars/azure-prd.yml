@@ -3,7 +3,7 @@ locationShort: eastus
 environment: production
 environmentShort: prd
 rgCommonName: paloalto
-vnetResourceGroupName: RG-East-DevB-VNET
-vnetName: VNET-East-DevB
+vnetResourceGroupName: RG-East2-DevB
+vnetName: VNET-East2-DevB
 commonName: paloalto
 commonNameShort: pa
