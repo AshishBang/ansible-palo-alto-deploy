@@ -7,34 +7,34 @@ albPublicPorts:
   - 443
 subnets:
   - 
-    name: NET-MGMT
-    netmask: 24
-    gateway: 10.0.1.1
+    name: net-mgmt
+    netmask: 26
+    gateway: 10.61.2.1
     ipAddresses:
-      - 10.0.1.6
-      - 10.0.1.7
+      - 10.61.2.6
+      - 10.61.2.7
   -
-    name: NET-TRUST
+    name: net-trust
     netmask: 24
-    gateway: 10.0.2.1
+    gateway: 10.61.3.1
     interfaceName: ethernet1/1
     ipAddresses:
-      - 10.0.2.4
-      - 10.0.2.5
+      - 10.61.3.4
+      - 10.61.3.5
   -
-    name: NET-UNTRUST
+    name: net-untrust
     netmask: 24
-    gateway: 10.0.3.1
+    gateway: 10.61.4.1
     interfaceName: ethernet1/2
     ipAddresses:
-      - 10.0.3.4
-      - 10.0.3.5
+      - 10.61.4.4
+      - 10.61.4.5
 albInternalIps:
-  - 10.0.2.101
-  - 10.0.2.102
-  - 10.0.2.103
-  - 10.0.2.104
-  - 10.0.2.105
+  - 10.61.3.101
+  - 10.61.3.102
+  - 10.61.3.103
+  - 10.61.3.104
+  - 10.61.3.105
 
 configuration:
   deviceconfig:
